@@ -1,4 +1,4 @@
-# desktop-switcher
+# desktop-image-switcher
 
 MacOS utility to change desktop background image for all desktops
 
@@ -7,8 +7,8 @@ MacOS utility to change desktop background image for all desktops
 To install system-wide to `/usr/local/bin`:
 
 ```
-git clone https://github.com/GabrielDougherty/macos-change-desktop-background.git
-cd macos-change-desktop-background
+git clone https://github.com/GabrielDougherty/desktop-image-switcher.git
+cd desktop-image-switcher
 sudo make install
 ```
 
@@ -17,7 +17,7 @@ Or if you want, just run `chmod +x desktop-image-switcher` and put it where ever
 ## Uninstall
 
 ```
-cd macos-change-desktop-background
+cd desktop-image-switcher
 sudo make uninstall
 ```
 
