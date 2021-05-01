@@ -40,3 +40,7 @@ This is because of my implementation approach of cycling through the desktops by
 ![Security and Privacy -> Accessiblity -> Allow the apps below to control your computer](screenshots/allow-control-2.png)
 
 If the prompt fails for some reason, you can add your terminal emulator to the list at `Security and Privacy -> Accessiblity -> Allow the apps below to control your computer`. [Apple support article](https://support.apple.com/guide/mac-help/allow-accessibility-apps-to-access-your-mac-mh43185/mac)
+
+## See Also
+
+I wrote a blog post about my debugging process leading up to creation of this tool: https://gabrieldougherty.com/posts/macos-change-desktop-background-image/
