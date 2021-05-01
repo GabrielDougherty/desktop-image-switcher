@@ -30,3 +30,13 @@ desktop-image-switcher "/System/Library/Desktop Pictures/Peak.heic" 3
 ```
 
 If you don't specify a number of desktops, desktop-image-switcher will default to 5.
+
+The first time you run the utility, you will be prompted to allow the terminal emulator to control your computer:
+
+[Terminal wants access to control](screenshots/allow-control-1.png)
+
+This is because of my implementation approach of cycling through the desktops by sending Ctrl+Arrow keys. Click Ok then add your Terminal or iTerm to the list of allowed applications:
+
+[Security and Privacy -> Accessiblity -> Allow the apps below to control your computer](screenshots/allow-control-2.png)
+
+If the prompt fails for some reason, you can add your terminal emulator to the list at `Security and Privacy -> Accessiblity -> Allow the apps below to control your computer`. [Apple support article](https://support.apple.com/guide/mac-help/allow-accessibility-apps-to-access-your-mac-mh43185/mac)
