@@ -29,7 +29,7 @@ To set the image for all three desktops to Peak:
 desktop-image-switcher "/System/Library/Desktop Pictures/Peak.heic" 3
 ```
 
-If you don't specify a number of desktops, desktop-image-switcher will default to 5.
+The first argument is the image to set, the second argument is the number of desktops. If you don't specify a number of desktops, desktop-image-switcher will default to 5.
 
 The first time you run the utility, you will be prompted to allow the terminal emulator to control your computer:
 
