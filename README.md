@@ -1,6 +1,6 @@
 # desktop-image-switcher
 
-MacOS utility to change desktop background image for all desktops
+MacOS utility to change desktop background image for all virtual desktops and monitors
 
 ## Installation
 
