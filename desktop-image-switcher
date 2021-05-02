@@ -39,7 +39,7 @@ IMAGE_SCRIPT_FILE=$(mktemp -t desktop-image-switcher)
 IMAGE_SCRIPT_TEXT="
 on run picture_file
     tell application \"System Events\"
-        tell desktop 1
+        tell every desktop
             set picture to picture_file
         end tell
         tell application \"System Events\"
