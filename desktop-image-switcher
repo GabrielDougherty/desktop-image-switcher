@@ -29,9 +29,13 @@ tell application \"System Events\"
 end tell"
 
 echo $GO_LEFT_DESKTOP_SCRIPT_TEXT > $GO_LEFT_DESKTOP_SCRIPT_FILE
-for i in {1..$NUM_DESKTOPS}; do
-  osascript $GO_LEFT_DESKTOP_SCRIPT_FILE
-done
+
+function go_left() {
+  for i in {1..$NUM_DESKTOPS}; do
+    osascript $GO_LEFT_DESKTOP_SCRIPT_FILE
+  done
+}
+go_left
 
 # Set image for each desktop
 
@@ -52,5 +56,6 @@ echo $IMAGE_SCRIPT_TEXT > $IMAGE_SCRIPT_FILE
 for i in {1..$NUM_DESKTOPS}; do
   osascript $IMAGE_SCRIPT_FILE "$NEW_PIC"
 done
+go_left
 rm -f $SCRIPT_FILE
 rm -f $GO_LEFT_DESKTOP_SCRIPT_FILE
