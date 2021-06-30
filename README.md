@@ -1,5 +1,7 @@
 # desktop-image-switcher
 
+NOTE: this stopped working in the latest update from Apple, MacOS 11.4. So I am archiving this application. Feel free to email me if you have any ideas.
+
 MacOS utility to change desktop background image for all virtual desktops and monitors
 
 ## Installation
