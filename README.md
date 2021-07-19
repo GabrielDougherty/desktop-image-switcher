@@ -10,7 +10,7 @@ MacOS utility to change desktop background image for all virtual desktops and mo
 To install system-wide to `/usr/local/bin`:
 
 ```
-git clone https://github.com/GabrielDougherty/desktop-image-switcher.git
+git clone https://github.com/captainfodder/desktop-image-switcher.git
 cd desktop-image-switcher
 sudo make install
 ```
