@@ -1,7 +1,5 @@
 # desktop-image-switcher
 
-NOTE: this stopped working in the latest update from Apple, MacOS 11.4. So I am archiving this application. Feel free to email me if you have any ideas.
-
 MacOS utility to change desktop background image for all virtual desktops and monitors
 
 ## Installation
@@ -42,6 +40,10 @@ This is because of my implementation approach of cycling through the desktops by
 ![Security and Privacy -> Accessiblity -> Allow the apps below to control your computer](screenshots/allow-control-2.png)
 
 If the prompt fails for some reason, you can add your terminal emulator to the list at `Security and Privacy -> Accessiblity -> Allow the apps below to control your computer`. [Apple support article](https://support.apple.com/guide/mac-help/allow-accessibility-apps-to-access-your-mac-mh43185/mac)
+
+## macOS version support
+
+Only the latest version of macOS is supported by this project.
 
 ## See Also
 
