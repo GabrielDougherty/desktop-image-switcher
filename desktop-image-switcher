@@ -19,43 +19,24 @@ if [ -z "$NUM_DESKTOPS" ]; then
 fi
 
 # Go to leftmost desktop
-
-GO_LEFT_DESKTOP_SCRIPT_FILE=$(mktemp -t desktop-image-switcher-go-left.XXXXXXXX)
-GO_LEFT_DESKTOP_SCRIPT_TEXT="
-tell application \"System Events\"
-    tell application \"System Events\"
-        key code 123 using {control down}
-    end tell
-end tell"
-
-echo $GO_LEFT_DESKTOP_SCRIPT_TEXT > $GO_LEFT_DESKTOP_SCRIPT_FILE
-
 function go_left() {
   for i in {1..$NUM_DESKTOPS}; do
-    osascript $GO_LEFT_DESKTOP_SCRIPT_FILE
+    osascript -e 'tell application "System Events" to key code 123 using {control down}'
   done
 }
 go_left
 
 # Set image for each desktop
-
-IMAGE_SCRIPT_FILE=$(mktemp -t desktop-image-switcher.XXXXXXXX)
-IMAGE_SCRIPT_TEXT="
-on run picture_file
-    tell application \"System Events\"
-        tell every desktop
-            set picture to picture_file
-        end tell
-        tell application \"System Events\"
-            key code 124 using {control down}
-        end tell
-        delay 0.5
-    end tell
-end run"
-echo $IMAGE_SCRIPT_TEXT > $IMAGE_SCRIPT_FILE
 for i in {1..$NUM_DESKTOPS}; do
-  osascript $IMAGE_SCRIPT_FILE "$NEW_PIC"
+  osascript -e 'on run picture_file' \
+            -e '  tell application "System Events"' \
+            -e '    tell every desktop' \
+            -e '      set picture to picture_file' \
+            -e '    end tell' \
+            -e '    key code 124 using {control down}' \
+            -e '    delay 0.5' \
+            -e '  end tell' \
+            -e 'end run' \
+            "$NEW_PIC"
 done
 go_left
-rm -f $SCRIPT_FILE
-rm -f $GO_LEFT_DESKTOP_SCRIPT_FILE
